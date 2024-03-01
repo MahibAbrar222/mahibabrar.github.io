@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio - Mahib Abrar</title>
+
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Poppins', sans-serif;
+        }
+        body{
+            width: 100%;
+            height: 100vh;
+            background: linear-gradient(180deg, rgb(185, 209, 245), rgb(213, 245, 213), rgb(186, 236, 236));
+        }
+        nav{
+            display: flex;
+            justify-content: space-between;
+            width: 100%;
+            padding: 20px;
+            background: #ffffff77;
+        }
+        nav .brand{
+            font-size: 20px;
+        }
+        nav .menus{
+            display: flex;
+        }nav .menus .menu{
+            list-style: none;
+            margin-right: 9px;
+            font-size: 17px;
+        }
+        nav .menus .menu a{
+            text-decoration: none;
+            color: #333;
+        }
+        .container{
+            width: 80%;
+            margin-left: auto;
+            margin-right: auto;
+            max-width: 700px;
+            min-width: 400px;
+            margin-top: 40px;
+            background: transparent;
+            justify-content: space-between;
+            display: flex;
+        }
+        .container .left{
+            padding: 100px;
+            font-size: 30px;
+            width: 50%;
+            line-height: 60px;
+            background: #333;
+            color: #fff;
+        }
+        .container .left:hover{
+            font-size: 38px;
+        }
+        .container .left h2{
+            font-weight: 400;
+        }
+        .container .right{
+            padding: 50px;
+            font-size: 30px;
+            border-left: 2px solid #fff;
+            width: 50%;
+            line-height: 60px;
+            background: #333;
+            color: #fff;
+        }
+        .container .right ul li{
+            font-size: 18px;
+            line-height: normal;
+            padding: 6px;
+        }
+        .container .right ul li:hover{
+            font-size: 22px;
+        }
+        footer{
+            margin-top: 20px;
+            background-color: #333;
+            padding: 10px;
+            color: #fff;
+        }
+        footer .center{
+            font-size: 16px;
+            text-align: center;
+        }
+        footer .center a{
+            color: #fff;
+            text-decoration: none;
+        }
+        @media (max-width: 730px) {
+            .container{
+                width: 90%;
+            }
+        }
+        @media (max-width: 630px) {
+            .container .left{
+                padding: 80px;
+            }
+        }
+        @media (max-width: 530px) {
+            .container .left{
+                font-size: 25px;
+                padding: 70px;
+            }
+        }
+        @media (max-width: 490px) {
+            .container{
+                width: 98%;
+            }
+        }
+        @media (max-width: 490px) {
+            .container{
+                width: 98%;
+            }
+        }
+        @media (max-width: 450px) {
+            .container{
+                display: block;
+                justify-content: none;
+                width: 90%;
+            }
+            .container .left{
+                width: 100%;
+            }
+            .container .right{
+                width: 100%;
+                border-top: 2px solid #fff;
+                border-left: none;
+            }
+        }
+    </style>
+</head>
+<body>
+    <nav>
+        <div class="brand">Mahib Abrar</div>
+        <ul class="menus">
+            <li class="menu"><a href="/portfolio/">About Me</a></li>
+            <li class="menu"><a href="/blog/index.html">Blog</a></li>
+        </ul>
+    </nav>
+
+    <div class="container">
+        <div class="left">
+            <h2>I'm Mahib Abrar</h2>
+        </div>
+        <div class="right">
+            SKILLS
+            <ul>
+                <li>Web Developing</li>
+                <li>Python</li>
+                <li>Backend Development with PHP & Python & Database</li>
+            </ul>
+        </div>
+    </div>
+
+    <footer>
+        <div class="center">
+            @Copyright 2024, Created by <a href="https://github.com/">Mahib Abrar</a>
+        </div>
+    </footer>
+    
+</body>
+</html>
