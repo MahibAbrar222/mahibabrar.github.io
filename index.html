@@ -1,170 +1,83 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Portfolio - Mahib Abrar</title>
-
-    <style>
-        *{
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-            font-family: 'Poppins', sans-serif;
-        }
-        body{
-            width: 100%;
-            height: 100vh;
-            background: linear-gradient(180deg, rgb(185, 209, 245), rgb(213, 245, 213), rgb(186, 236, 236));
-        }
-        nav{
-            display: flex;
-            justify-content: space-between;
-            width: 100%;
-            padding: 20px;
-            background: #ffffff77;
-        }
-        nav .brand{
-            font-size: 20px;
-        }
-        nav .menus{
-            display: flex;
-        }nav .menus .menu{
-            list-style: none;
-            margin-right: 9px;
-            font-size: 17px;
-        }
-        nav .menus .menu a{
-            text-decoration: none;
-            color: #333;
-        }
-        .container{
-            width: 80%;
-            margin-left: auto;
-            margin-right: auto;
-            max-width: 700px;
-            min-width: 400px;
-            margin-top: 40px;
-            background: transparent;
-            justify-content: space-between;
-            display: flex;
-        }
-        .container .left{
-            padding: 100px;
-            font-size: 30px;
-            width: 50%;
-            line-height: 60px;
-            background: #333;
-            color: #fff;
-        }
-        .container .left:hover{
-            font-size: 38px;
-        }
-        .container .left h2{
-            font-weight: 400;
-        }
-        .container .right{
-            padding: 50px;
-            font-size: 30px;
-            border-left: 2px solid #fff;
-            width: 50%;
-            line-height: 60px;
-            background: #333;
-            color: #fff;
-        }
-        .container .right ul li{
-            font-size: 18px;
-            line-height: normal;
-            padding: 6px;
-        }
-        .container .right ul li:hover{
-            font-size: 22px;
-        }
-        footer{
-            margin-top: 20px;
-            background-color: #333;
-            padding: 10px;
-            color: #fff;
-        }
-        footer .center{
-            font-size: 16px;
-            text-align: center;
-        }
-        footer .center a{
-            color: #fff;
-            text-decoration: none;
-        }
-        @media (max-width: 730px) {
-            .container{
-                width: 90%;
-            }
-        }
-        @media (max-width: 630px) {
-            .container .left{
-                padding: 80px;
-            }
-        }
-        @media (max-width: 530px) {
-            .container .left{
-                font-size: 25px;
-                padding: 70px;
-            }
-        }
-        @media (max-width: 490px) {
-            .container{
-                width: 98%;
-            }
-        }
-        @media (max-width: 490px) {
-            .container{
-                width: 98%;
-            }
-        }
-        @media (max-width: 450px) {
-            .container{
-                display: block;
-                justify-content: none;
-                width: 90%;
-            }
-            .container .left{
-                width: 100%;
-            }
-            .container .right{
-                width: 100%;
-                border-top: 2px solid #fff;
-                border-left: none;
-            }
-        }
-    </style>
+	<meta charset="UTF-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1" />
+	<meta name="keywords" content="Mhaib Abrar, mahibabrar, mahib, mahib abrar, portfolio mahib" />
+	<meta name="author" content="Mahib Abrar" />
+	<meta name="description" content="I am Mahib Abrar. Currently, I'm a student. I live in Bangladesh." />
+	
+	<title>Mahib Abrar's Portfolio</title>
+	
+	<style>
+		*{
+			margin: 0;
+			padding: 0;
+			box-sizing: border-box;
+			font-family: sans-serif;
+		}
+		body{
+			width: 100%;
+			height: 100vh;
+			background: #0981ad;
+		}
+		nav{
+			width: 100%;
+			padding: 25px;
+			background: #205072;
+			color: #fff;
+		}
+		nav .nav-brand{
+			font-size: 25px;
+			font-weight: 400;
+		}
+		.container{
+			width: 100%;
+			height: 100%;
+			text-align: center;
+			padding: 70px;
+			background: url('background.png');
+			background-position: center;
+		}
+		.container h3{
+			color: #fff;
+			font-size: 40px;
+			font-weight: 400;
+			padding: 20px;
+		}
+		.container .section{
+			width: 50%;
+			text-align: center;
+			margin-left: auto;
+			margin-right: auto;
+			padding: 19px;
+			background: #0c5863;
+			color: #fff;
+			border-radius: 8px;
+		}
+		.container .section h4{
+			font-size: 17px;
+			font-weight: 400;
+			padding: 8px;
+		}
+		.container .section p a{
+			color: #fff;
+			text-decoration: none;
+		}
+	</style>
 </head>
 <body>
-    <nav>
-        <div class="brand">Mahib Abrar</div>
-        <ul class="menus">
-            <li class="menu"><a href="/portfolio/">About Me</a></li>
-            <li class="menu"><a href="/blog/index.html">Blog</a></li>
-        </ul>
-    </nav>
-
-    <div class="container">
-        <div class="left">
-            <h2>I'm Mahib Abrar</h2>
-        </div>
-        <div class="right">
-            SKILLS
-            <ul>
-                <li>Web Developing</li>
-                <li>Python</li>
-                <li>Backend Development with PHP & Python & Database</li>
-            </ul>
-        </div>
-    </div>
-
-    <footer>
-        <div class="center">
-            @Copyright 2024, Created by <a href="https://github.com/MahibAbrar222">Mahib Abrar</a>
-        </div>
-    </footer>
-    
+	<nav class="nav">
+		<a class="nav-brand">Mahib Abrar's Website</a>
+	</nav>
+	<div class="container">
+		<h3>My name is <b>Mahib Abrar</b></h3>
+		<div class="section">
+			<h4>About Me</h4>
+			<p>
+				My name is Mahib Abrar. I am a student of school. I live in <a href="https://en.wikipedia.org/wiki/Bangladesh" target="_blank">Bangladesh</a>. I am a web developer. I learned frontend languages like html, css, etc. I also learned backend language such as php, javascript, sql, python, etc.
+			</p>
+		</div>
+	</div>
 </body>
 </html>
