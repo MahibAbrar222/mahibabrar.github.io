@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!--<meta http-equiv="refresh" content="10">-->
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="keywords" content="qr code genarator,free online qr code genarator,online qr code genarator website, online qr code genarator app">
+    <meta name="author" content="Mahib Abrar">
+    <meta name="description" content="This site help you to build a qr code from a text or url. You can change qr code size, foreground colors, background colors, etc.">
+
+    <title>QR Code Genarator by Mahib</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <br><br>
+    <div class="container">
+        <div class="title">QR Code Genarator</div>
+        <div class="input">
+            <div class="link">
+                <input type="text" placeholder="URL or text to qr code" class="input_url" id="data-input">
+            </div>
+            <div class="options">
+                <label for="">Size:</label>
+                <select name="size" id="size">
+                    <option value="100">100 x 100</option>
+                    <option value="200">200 x 200</option>
+                    <option value="300">300 x 300</option>
+                </select>
+            </div>
+            <div class="colors">
+                <div class="color_input">
+                    <label for="fg">Foreground</label>
+                    <input type="color" name="fg" id="fg">
+                </div>
+                <div class="color_input">
+                    <label for="bg">Background</label>
+                    <input type="color" name="bg" id="bg">
+                </div>
+            </div>
+            <button id="gen">Genarate</button>
+            <small class="red">* Text input required</small>
+            <div class="place"><div class="placement"></div></div>
+            
+            <button id="db">Download</button>
+        </div>
+    </div>
+
+    <footer>
+        <div class="text">
+            Created by Mahib, Return to <a href="/">Portfolio</a>
+        </div>
+    </footer>
+    <script src="qrcode.min.js"></script>
+    <script src="./script.js"></script>
+</body>
+</html>
