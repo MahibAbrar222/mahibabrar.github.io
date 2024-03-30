@@ -1,104 +1,80 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-	<meta charset="UTF-8" />
-	<meta name="viewport" content="width=device-width, initial-scale=1" />
-	<meta name="keywords" content="Mahib Abrar, mahibabrar, mahib, mahib abrar, portfolio mahib" />
-	<meta name="author" content="Mahib Abrar" />
-	<meta name="description" content="I am Mahib Abrar. Currently, I'm a student. I live in Bangladesh." />
-	
-	<title>Mahib Abrar's Portfolio</title>
-	
-	<style>
-		*{
-			margin: 0;
-			padding: 0;
-			box-sizing: border-box;
-			font-family: sans-serif;
-		}
-		body{
-			width: 100%;
-			height: 100vh;
-			background: #0981ad;
-		}
-		nav{
-			width: 100%;
-			padding: 25px;
-			background: #205072;
-			color: #fff;
-		}
-		nav .nav-brand{
-			font-size: 25px;
-			font-weight: 400;
-		}
-		.container{
-			width: 100%;
-			height: 100%;
-			text-align: center;
-			padding: 70px;
-			background: url('background.png');
-			background-position: center;
-			 background-size: cover;
-		}
-		.container h3{
-			color: #fff;
-			font-size: 40px;
-			font-weight: 400;
-			padding: 20px;
-		}
-		.container .section{
-			width: 50%;
-			text-align: center;
-			margin-left: auto;
-			margin-right: auto;
-			padding: 19px;
-			background: #0c5863;
-			color: #fff;
-			border-radius: 8px;
-		}
-		.container .section h4{
-			font-size: 17px;
-			font-weight: 400;
-			padding: 8px;
-		}
-		.container .section p a{
-			color: #fff;
-			text-decoration: none;
-		}
-		.container .section p ul li a{
-			color: #fff;
-		}
-		@media(max-width: 600px){
-			.container{
-				padding: 45px;
-			}
-			.container .section{
-				width: 85%;
-				
-			}
-		}
-	</style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="keywords" content="Mahib, Mahib Abrar, web designer, frontend developer, backend developer, php developer, web developer, web development">
+    
+    <title>Mahib Abrar</title>
+
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-	<nav class="nav">
-		<a class="nav-brand">Mahib Abrar's Website</a>
-	</nav>
-	<div class="container">
-		<h3>My name is <b>Mahib Abrar</b></h3>
-		<div class="section">
-			<h4>About Me</h4>
-			<p>
-				My name is Mahib Abrar. I am a student of school. I live in <a href="https://en.wikipedia.org/wiki/Bangladesh" target="_blank">Bangladesh</a>. I am a web developer. I learned frontend languages like html, css, etc. I also learned backend language such as php, javascript, sql, python, etc.
-			</p>
-		</div>
-		<div class="section">
-			<h4>Tools</h4>
-			<p>
-				<ul>
-					<li><a href="http://mahibabrar.me/QR-CODE-GENARATOR/">QR Code Genarator</a></li>
-				</ul>
-			</p>
-		</div>
-	</div>
+    <nav>
+        <div class="brand">Mahib Abrar</div>
+    </nav>
+    <div class="container">
+        <div class="none">
+            <h3>Mahib Abrar</h3>
+            <h3>Web Developer</h3>
+            <h3>Frontend Developer</h3>
+            <h3>PHP</h3>
+            <h3>HTML</h3>
+            <h3>Javascript</h3>
+        </div>
+
+        <div class="section">
+            <h3>About Myself</h3>
+            <table>
+                <tbody>
+                    <tr>
+                        <td>Name:</td>
+                        <td>Mahib Abrar</td>
+                    </tr>
+                    <tr>
+                        <td>Job:</td>
+                        <td>Student</td>
+                    </tr>
+                    <tr>
+                        <td>Country:</td>
+                        <td>Bangladesh</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <div class="section">
+            <div class="skill">
+                <h3>My Skills</h3>
+                <div class="cards">
+                    <div class="item">
+                        <h1>Web Development</h1>
+                        <p>I can create websites by html, css and javascript.</p>
+                    </div>
+                    <div class="item">
+                        <h1>Backend Development</h1>
+                        <p>I know backend languages such as php, python etc with database like mysql, maridb etc. On the other hand, I an create website by python by Django Rest Framework.</p>
+                    </div>
+                    <div class="item">
+                        <h1>Ethical Hacking</h1>
+                        <p>At this moment, cyber security is very important for us. We use many digital devices and get benefits from it. But some blackhat hackers can steal your personal information by hacking. So, cyber security is very important to save our privacy. I am learning ethical hacking for this.</p>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+        <br>
+        <div class="section">
+            <h3>Tools in this web</h3>
+            <div class="cards">
+                <div class="item">
+                    <h1><a href="/QR-CODE-GENARATOR/">Qr Code Genarator Tool</a></h1>
+                    <p>This site help you to genarate a qr code from a text or url. You can change qr code size, foreground colors, background colors, etc.</p>
+                    
+                </div>
+            </div>
+        </div>
+        
+    </div>
 </body>
 </html>
