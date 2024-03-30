@@ -25,6 +25,8 @@ nav{
 nav .brand{
 	font-size: 25px;
 	font-weight: 400;
+	color:#fff;
+	padding:2px;
 }
 
 /*nav{
