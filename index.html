@@ -1,80 +1,76 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="keywords" content="Mahib, Mahib Abrar, web designer, frontend developer, backend developer, php developer, web developer, web development">
-    
-    <title>Mahib Abrar</title>
+	<meta charset="UTF-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1" />
+	<meta name="theme" content="#000" />
+	<meta name="description" content="Mahib Abrar, a webdeveloper. I'm learned html, css, js" />
+	
+	<title>Mahib Abrar</title>
 
-    <link rel="stylesheet" href="style.css">
+	<link rel="stylesheet" href="style.css" />
 </head>
 <body>
-    <nav>
-        <a class="brand" href="https://github.com/MahibAbrar222">Mahib Abrar</a>
-    </nav>
-    <div class="container">
-        <div class="none">
-            <h3>Mahib Abrar</h3>
-            <h3>Web Developer</h3>
-            <h3>Frontend Developer</h3>
-            <h3>PHP</h3>
-            <h3>HTML</h3>
-            <h3>Javascript</h3>
-        </div>
+	<nav>
+		<a class="brand" href=".">Mahib Abrar</a>
+		<button class="mToggle">☰</button>
+		<div class="items">
+			<button class="cancelMenu">&times;</button>
+			<a href="#about-me">About</a>
+			<a href="#web-projects">Web Projects</a>
+			<a href="#blog">Blog</a>
+			<a href="#contact-me" class="sp">Contact</a>
+		</ul>
+	</nav>
+	<div class="container">
+		<div class="headitems" id="">
+			<h2>I'm Mahib Abrar</h2>
+			<h3>I'm a web developer</h3>
+		</div>
+		<section>
+			<h2 id="About Me">&#9733; About Me</h2>
+			<p>My name is Mahib Abrar. I have learned web development from my curiosity. Currently I learned html, css, js and python (& php also ). I am from Bangladesh. I am a student.</p>
+		</section>
+		<section>
+			<h2 id="web-projects">&#9733; Web Projects</h2>
+			<p class="error">Currently Not Available</p>
+		</section>
+		<section>
+			<h2 id="tools">&#9733; Tools</h2>
+			<div class="pr-items">
+				<div class="item">
+					<h3>Temperature Scale Conversation</h3>
+					<p>Easily convert temparature scales, 3 scales available (celcius, fahrenhite, kelvin)</p>
+					<a href="tools/celcius-fahrenheit-conversation/">View Tool</a>
+				</div>
+			</div>
+		</section>
+		<section>
+			<h2 id="contact-me">&#9733; Contact with Me</h2>
+			<p class="error">Currently Not Available</p>
+		</section>
+		<footer>
+			<p>Created by Mahib Abrar</p>
+		</footer>
+	</div>
+	
+	<a class="backtotop" href="#">Go First</a>
 
-        <div class="section">
-            <h3>About Myself</h3>
-            <table>
-                <tbody>
-                    <tr>
-                        <td>Name:</td>
-                        <td>Mahib Abrar</td>
-                    </tr>
-                    <tr>
-                        <td>Job:</td>
-                        <td>Student</td>
-                    </tr>
-                    <tr>
-                        <td>Country:</td>
-                        <td>Bangladesh</td>
-                    </tr>
-                </tbody>
-            </table>
-        </div>
+	<script src="jquery.min.js"></script>
+	<script>
+		var menuStat = 0; // Off
+		$('.mToggle').click(function(){
+			if (menuStat === 0){
+				$('.items').css('left', '0');
+			}else{
+				$('.items').css('left', '-250px');
+			}
+			menuStat = 1 - menuStat; // On: 1, Off: 0
+		});
+		$('.cancelMenu').click(function(){
+			$('.items').css('left', '-250px');
+		});
 
-        <div class="section">
-            <div class="skill">
-                <h3>My Skills</h3>
-                <div class="cards">
-                    <div class="item">
-                        <h1>Web Development</h1>
-                        <p>I can create websites by html, css and javascript.</p>
-                    </div>
-                    <div class="item">
-                        <h1>Backend Development</h1>
-                        <p>I know backend languages such as php, python etc with database like mysql, maridb etc. On the other hand, I an create website by python by Django Rest Framework.</p>
-                    </div>
-                    <div class="item">
-                        <h1>Ethical Hacking</h1>
-                        <p>At this moment, cyber security is very important for us. We use many digital devices and get benefits from it. But some blackhat hackers can steal your personal information by hacking. So, cyber security is very important to save our privacy. I am learning ethical hacking for this.</p>
-                    </div>
-                </div>
-
-            </div>
-        </div>
-        <br>
-        <div class="section">
-            <h3>Tools in this web</h3>
-            <div class="cards">
-                <div class="item">
-                    <h1><a href="/QR-CODE-GENARATOR/">Qr Code Genarator Tool</a></h1>
-                    <p>This site help you to genarate a qr code from a text or url. You can change qr code size, foreground colors, background colors, etc.</p>
-                    
-                </div>
-            </div>
-        </div>
-        
-    </div>
+	</script>
 </body>
 </html>
