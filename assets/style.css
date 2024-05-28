@@ -1,0 +1,305 @@
+/*
+ * Created By Mahib Abrar
+ * Only for mahibabrar.me
+ */
+
+*{
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	font-family: sans-serif;
+}
+
+body{
+	width: 100%;
+	height: 100%;
+	background: linear-gradient(to right, #f3f3f3, #f0ffff);
+	padding: 20px;
+}
+
+nav{
+	width: 100%;
+	background: #fff;
+	box-shadow: 0 5px 15px #ccc;
+	display: flex;
+	justify-content: space-between;
+	padding: 10px;
+	position: fixed;
+	left: 0;
+	top: 0;
+	z-index: 1;
+}
+nav .brand{
+	text-decoration: none;
+}
+nav .brand img{
+	width: 64px;
+	height: 64px;
+}
+nav .items{
+	display: flex;
+	list-style: none;
+}
+nav .items li a{
+	line-height: 64px;
+	padding: 10px;
+	background: #118cff;
+	color: #fff;
+	text-decoration: none;
+	margin-left: 5px;
+	font-size: 15px;
+	text-wrap: nowrap;
+}
+nav .items li a img{
+	width: 15px;
+	height: 15px;
+	background: #fff;
+	border-radius: 4px;
+}
+
+
+/*
+ * Latest Post
+ */
+.top-cn{
+	display: flex;
+	margin-top: 100px;
+	justify-content: space-around;
+	gap: 20px;
+}
+.top-cn .contact-details{
+	flex-basis: 100;
+	padding: 20px;
+	background: #fff;
+	box-shadow: 0 4px 18px #ccc;
+	border-radius: 20px;
+}
+.top-cn .contact-details h3{
+	padding: 20px;
+	text-align: center;
+	font-size: 30px;
+	/*
+	* Experimental
+	*/
+	color: transparent;
+	background: linear-gradient(to right, blue, purple, #111, green);
+	-webkit-background-clip: text;
+	background-clip: text;
+	font-weight: 600;
+}
+
+.latest{
+	flex-basis: 300;
+	width: 100%;
+	background: #fff;
+	border-radius: 20px;
+	box-shadow: 0 5px 15px #ccc;
+	position: relative;
+}
+.top-cn .contact-details p{
+	padding: 10px;
+	font-size: 15px;
+}
+.latest img{
+	width: 100%;
+	max-width: 100%;
+	max-height: 400px;
+	border-radius: 20px 20px 0 0;
+	background: #ccc;
+}
+.latest h2{
+	padding: 10px;
+	color: #111;
+	font-weight: 400;
+}
+.latest .info{
+	padding: 10px;
+}
+.latest .info b{
+	font-weight: 500;
+}
+.latest h2 a{
+	text-decoration: none;
+	/*
+	 * Experimental
+	 */
+	color: transparent;
+	background: linear-gradient(to right, blue, purple, #111, green);
+	-webkit-background-clip: text;
+	background-clip: text;
+	font-weight: 500;
+}
+.latest .badge{
+	position: absolute;
+	padding: 10px;
+	background: #118cff;
+	color: #fff;
+	opacity: 1;
+	border-radius: 20px 5px;
+}
+
+@media(max-width: 700px){
+	.top-cn{
+		flex-direction: column;
+	}
+}
+
+
+
+.posts{
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+	padding: 10px;
+	gap: 40px;
+	margin-top: 20px;
+}
+.posts .post{
+	flex-basis: 200;
+	background: #fff;
+	box-shadow: 0 5px 15px #ccc;
+	border-radius: 20px;
+}
+.posts .post img{
+	width: 100%;
+	max-width: 100%;
+	max-height: 200px;
+	border-radius: 20px 20px 0 0;
+}
+.posts .post h2{
+	padding: 15px;
+	color: #111;
+	font-weight: 400;
+}
+.posts .post h2 a{
+	text-decoration: none;
+	/*
+	* Experimental
+	*/
+	color: transparent;
+	background: linear-gradient(to right, blue, purple, #111, green);
+	-webkit-background-clip: text;
+	background-clip: text;
+	font-weight: 500;
+}
+.posts .post .info{
+	padding: 15px;
+	font-size: 15px;
+}
+.posts .post .info b{
+	/*
+	* Experimental
+	*/
+	color: transparent;
+	background: linear-gradient(to right, blue, purple, #111, green);
+	-webkit-background-clip: text;
+	background-clip: text;
+	font-weight: 500;
+}
+
+.post-v{
+	margin-top: 100px;
+	padding: 20%;
+	padding-top: 30px;
+	padding-bottom: 30px;
+	border-radius: 20px;
+	background: #fff;
+	box-shadow: 0 10px 20px #ccc;
+}
+.post-v .img{
+	width: 100%;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	border: 1px solid #ccc;
+	text-align: center;
+	color: #ccc;
+}
+.post-v .img img{
+	max-width: 100%;
+}
+.post-v .img a{color: #ccc;text-decoration:none;}
+.post-v h1{
+	/*
+	* Experimental
+	*/
+	color: transparent;
+	background: linear-gradient(to right, blue, purple, #111, #000);
+	-webkit-background-clip: text;
+	background-clip: text;
+	font-weight: 600;
+	font-size: 35px;
+	padding: 10px;
+}
+.post-v h2{
+	padding: 10px;
+	/*
+	* Experimental
+	*/
+	color: transparent;
+	background: linear-gradient(to right, blue, purple, #111, #000);
+	-webkit-background-clip: text;
+	background-clip: text;
+	font-weight: 500;
+	font-size: 27px;
+}
+.post-v h3{
+	padding: 10px;
+	/*
+	* Experimental
+	*/
+	color: transparent;
+	background: linear-gradient(to right, blue, purple, #111, #000);
+	-webkit-background-clip: text;
+	background-clip: text;
+	font-weight: 500;
+	font-size: 22px;
+}
+.post-v p{
+	width: 100%;
+	padding: 10px;
+	font-size: 16px;
+}
+
+ul,ol{
+	padding: 10px;
+	margin-left: 15px;
+}
+ul li, ol li{
+	margin-top: 5px;
+}
+blockquote{
+	background: #f3f3f3;
+	border: 1px solid #f5f5f5;
+	padding: 10px;
+	font-size: 18px;
+	margin: 10px;
+	text-align: center;
+}
+blockquote p{
+	font-size: 17px;
+}
+blockquote p b{
+	font-size: 20px;
+}
+
+@media (max-width: 500px){
+	.post-v{
+		padding: 10%;
+		padding-top: 30px;
+		padding-bottom: 30px;
+	}
+}
+
+/*
+ * Footer
+ */
+footer{
+	background: #100;
+	color: #fff;
+	text-align: center;
+	padding: 20px;
+	border-radius: 20px 20px 0 0;
+	margin-top: 20px;
+}

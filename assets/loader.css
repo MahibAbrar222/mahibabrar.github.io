@@ -1,0 +1,35 @@
+.loader-container{
+	position: fixed;
+	left: 0;
+	top: 0;
+	bottom: 0;
+	width: 100%;
+	z-index: 1;
+	background: rgb(255, 255, 255, 0.8);
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	visibility: hidden;
+}
+.loader-container.active{
+	visibility: visible;
+}
+.loader-container .loader{
+	width: 64px;
+	height: 64px;
+	border-radius: 100%;
+	border: 10px solid #ccc;
+	border-top: 10px solid blue;
+}
+.loader-container.active .loader{
+	animation: infinite 0.8s loading;
+}
+
+@keyframes loading{
+	from{
+		transform: rotate(0deg);
+	}
+	to{
+		transform: rotate(360deg);
+	}
+}
