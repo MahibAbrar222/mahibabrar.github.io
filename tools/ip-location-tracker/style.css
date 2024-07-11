@@ -1,0 +1,80 @@
+/*
+ * Developer: Mahib Abrar
+ * Project: Ip Tracker
+ * CopyRight-Owner: Mahib Abrar, 2024
+ */
+
+/* Poppins font url */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+body{
+    width: 100%;
+    height: 100%;
+}
+
+header{
+    position: sticky;
+    left: 0;
+    width: 100%;
+    padding: 50px;
+    text-align: center;
+    background: linear-gradient(to right,#667db6, #0082c8,#0082c8,#667db6);
+}
+header h1{
+    color: #fff;
+    font-size: 40px;
+    font-weight: 400;
+}
+
+header form{
+    width: 100%;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    max-width: 500px;
+    margin-top: 40px;
+}
+header form input{
+    width: 70%;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    outline: none;
+}
+header form input:focus{
+    border: 1px solid #667db6;
+    box-shadow: 0 0 5px #667db6;
+}
+header form button{
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    background: #667db6;
+    color: #fff;
+    font-size: 16px;
+    cursor: pointer;
+    outline: none;
+}
+header form button:hover{
+    background: #424547;
+}
+
+#map{
+    width: 90%;
+    height: 400px;
+    margin: auto;
+}
+footer{
+    background: linear-gradient(to right,#667db6, #0082c8,#0082c8,#667db6);
+    color: #fff;
+    padding: 10px;
+    width: 100%;
+    text-align: center;
+}
