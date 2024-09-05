@@ -120,7 +120,7 @@ nav ul li a:hover{
     font-size: 23px;
     font-weight: 600;
     color: #333;
-    text-wrap: nowrap;
+    text-wrap: wrap;
     padding: 5px;
 }
 .skills .container .skill ul{
