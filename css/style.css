@@ -24,7 +24,5 @@ body{
     background: linear-gradient(90deg, #f12711, #f5af19);
     background-clip: text;
     -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
     -moz-background-clip: text;
-    -moz-text-fill-color: transparent;
 }
