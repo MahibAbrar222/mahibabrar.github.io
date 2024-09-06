@@ -123,22 +123,21 @@ nav ul li a:hover{
     text-wrap: wrap;
     padding: 5px;
 }
-.skills .container .skill ul{
-    margin-top: 20px;
-    list-style: none;
-    text-align: left;
+.skills .container .skill img{
+    max-width: 200px;
+    max-height: 200px;
+    padding: 20px;
 }
-.skills .container .skill ul li{
-    font-size: 22px;
-    color: #333;
-    margin: 10px 0;
-    font-weight: 800;
-    /* Linear gradient of blue, red, indigo and so nice */
-    background: linear-gradient(90deg, #11517c,  #380e4b, #1e2e38);
-    background-clip: text;
-    -webkit-background-clip: text;
-    -moz-background-clip: text;
-    color: transparent;
+.skills .container .skill .skillbar{
+    width: 100%;
+    background: #ffbcbc;
+    margin-top: 10px;
+    color: #fff;
+}
+.skills .container .skill .skillbar .bar{
+    background: #074d6d;
+    padding: 8px;
+    text-align: center;
 }
 
 
