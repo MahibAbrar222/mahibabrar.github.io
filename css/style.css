@@ -101,7 +101,7 @@ nav ul li a:hover{
 }
 .skills .container .skill{
     width: 250px;
-    height: 250px;
+    min-height: 300px;
     margin: 20px;
     background-color: #fff;
     border-radius: 10px;
@@ -111,6 +111,7 @@ nav ul li a:hover{
     align-items: center;
     flex-direction: column;
     transition: 0.3s;
+    position: relative;
 
 }
 .skills .container .skill:hover{
@@ -133,6 +134,9 @@ nav ul li a:hover{
     background: #ffbcbc;
     margin-top: 10px;
     color: #fff;
+    position: absolute;
+    bottom: 0;
+    
 }
 .skills .container .skill .skillbar .bar{
     background: #074d6d;
