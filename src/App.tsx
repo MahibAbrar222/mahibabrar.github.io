@@ -8,6 +8,16 @@ function App() {
     <>
       <Helmet>
         <title>Mahib Abrar – Developer Portfolio</title>
+
+        <meta name="description" content="Welcome to my portfolio! I'm Mahib Abrar, a passionate developer creating innovative solutions. Explore my projects and get in touch!" />
+        <meta name="keywords" content="Mahib Abrar, developer portfolio, projects, contact, web development, software engineering" />
+        <meta name="author" content="Mahib Abrar" />
+
+        {/* Og */}
+        <meta property="og:title" content="Mahib Abrar – Developer Portfolio" />
+        <meta property="og:description" content="Welcome to my portfolio! I'm Mahib Abrar, a passionate developer creating innovative solutions. Explore my projects and get in touch!" />
+        <meta property="og:image" content="https://avatars.githubusercontent.com/u/128323013?v=4" />
+        <meta property="og:url" content="https://itsmahibabrar.github.io" />
       </Helmet>
       
       <Navbar />
@@ -22,6 +32,8 @@ function App() {
           <img src="https://avatars.githubusercontent.com/u/128323013?v=4" alt="profile" />
         </div>
       </section>
+
+      
     </>
   )
 }
