@@ -113,13 +113,13 @@
     box-shadow: 0 10px 30px rgba(0,0,0,0.1);
     overflow: hidden;
     transition: transform 0.3s, box-shadow 0.3s;
+    text-align: center;
 }
 .projects-section .project-card:hover {
     transform: translateY(-5px);
     box-shadow: 0 15px 40px rgba(0,0,0,0.2);
 }
 .projects-section .project-card img {
-    width: 100%;
     height: 200px;
     object-fit: cover;
 }
@@ -133,6 +133,14 @@
 .projects-section .project-card .card-content p {
     font-size: 1rem;
     color: rgba(0,0,0,0.7);
+}
+.projects-section .project-card .card-content .project-link{
+    display: inline-block;
+    margin-top: 1rem;
+    color: #8b5cf6;
+    text-decoration: none;
+    font-weight: 500;
+    transition: color 0.3s;
 }
 .contact-section {
     padding: 4rem 2rem;
