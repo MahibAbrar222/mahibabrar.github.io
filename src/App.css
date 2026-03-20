@@ -6,7 +6,7 @@
     padding: 4rem 2rem;
     display: flex;
     justify-content: space-around;
-    padding-top: 100px;
+    padding-top: 130px;
 }
 .hero-section .heroleft {
     max-width: 500px;
@@ -50,4 +50,26 @@
 }
 .hero-section .heroright img {
     animation: float 4s ease-in-out infinite;
+}
+
+/* Mobile Device And reverese .heroleft and .heroright */
+@media (max-width: 768px) {
+    .hero-section {
+        flex-direction: column;
+        padding: 2rem 1rem;
+        text-align: center;
+        align-items: center;
+    }
+    .hero-section .heroleft, .hero-section .heroright {
+        max-width: none;
+    }
+    .hero-section .heroleft {
+        order: 2;
+        gap: 1rem;
+    }
+    .hero-section .heroright {
+        order: 1;
+        margin-bottom: 2rem;
+        width: 70%;
+    }
 }
