@@ -51,10 +51,11 @@ function App() {
           
         </div>
         <div className="project-card">
+          <img src="https://jywvaocqguhhvphhbquv.supabase.co/storage/v1/object/public/server-logos/569098e8-8249-438f-afcf-52cb613dacd4/1774005274953.webp" alt="Minecraft Server Status MCP" />
             <div className="card-content">
-          <h3>Project Two</h3>
-          <p>A mobile app that helps users manage their daily tasks and stay organized.</p>
-          <a href="#" className="project-link">View Project</a>
+          <h3>Minecraft Server Status MCP</h3>
+          <p>Queries Minecraft Java Edition servers for status details including online/offline state, player count, maximum players, version, latency, and MOTD ...</p>
+          <a href="https://mcpize.com/mcp/minecraft-server-status" target="_blank" rel="noopener noreferrer" className="project-link">View Project</a>
           </div>
         </div>
         </div>
