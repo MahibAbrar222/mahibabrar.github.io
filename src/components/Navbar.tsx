@@ -1,5 +1,6 @@
 import { useState, useEffect } from 'react';
 import './Navbar.css';
+import { Link } from 'react-router-dom';
 
 export default function Navbar() {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
@@ -72,15 +73,15 @@ export default function Navbar() {
         {/* Desktop Navigation */}
         <div className="navbar-links desktop-nav">
           {navLinks.map((link) => (
-            <a
+            <Link
               key={link.id}
-              href={link.href}
+              to={link.href}
               className={`nav-link ${activeSection === link.id ? 'active' : ''}`}
               onClick={handleLinkClick}
             >
               <span className="nav-link-text">{link.name}</span>
               <span className="nav-link-underline"></span>
-            </a>
+            </Link>
           ))}
         </div>
 
