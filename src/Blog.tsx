@@ -24,6 +24,18 @@ export default function Blog() {
                     name="description"
                     content="Articles on building modern web experiences, shipping faster, and crafting delightful developer products."
                 />
+
+                {/* SEO */}
+                <meta
+                    name="keywords"
+                    content="Mahib Abrar, blog, web development, frontend, developer experience, product design, performance, accessibility"
+                />
+                <meta name="author" content="Mahib Abrar" />
+                {/* Open Graph */}
+                <meta property="og:title" content="Blog – Mahib Abrar" />
+                <meta property="og:description" content="Articles on building modern web experiences, shipping faster, and crafting delightful developer products." />
+                <meta property="og:image" content="https://avatars.githubusercontent.com/u/128323013?v=4" />
+                <meta property="og:url" content="https://itsmahibabrar.github.io/blog" />
             </Helmet>
 
             <section className="blog-hero">
@@ -41,9 +53,9 @@ export default function Blog() {
                 </div>
                 <div className="blog-hero__card">
                     <div className="badge">Now writing</div>
-                    <h3>Upcoming: "Product velocity with tiny teams"</h3>
-                    <p>Notes on balancing scope, quality, and speed without burning out.</p>
-                    <div className="meta">Draft · ETA: next week</div>
+                    <h3>Upcoming: "First Journey into esp32 Development"</h3>
+                    <p>Notes on experience of journey into esp32 development, As I am first exploring a microcontroller .</p>
+                    <div className="meta">Draft · ETA: next week/month</div>
                 </div>
             </section>
 
