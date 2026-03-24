@@ -41,7 +41,7 @@ export default function Blog() {
             <section className="blog-hero">
                 <div className="blog-hero__content">
                     <p className="eyebrow">Blog &amp; Insights</p>
-                    <h1>Stories on building, shipping, and designing better products.</h1>
+                    <h1>Stories on Building, Experiencing, Review etc. .</h1>
                     <p className="lead">
                         Curated notes on frontend craft, developer experience, and product thinking—designed to be practical and
                         concise.
