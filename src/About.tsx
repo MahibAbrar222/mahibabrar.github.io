@@ -115,7 +115,7 @@ export default function About() {
             <h3>@itsmahibabrar</h3>
             <p>Browse code, issues, and ongoing experiments.</p>
           </a>
-          <a className="contact-card" href="https://www.youtube.com/@mahibabrar-23" target="_blank" rel="noopener noreferrer">
+          <a className="contact-card" href="https://www.youtube.com/@mahibabrarofficial" target="_blank" rel="noopener noreferrer">
             <span className="chip">Youtube</span>
             <h3>Youtube Gaming Channel</h3>
             <p>Its mainly about gaming content, not coding.</p>
