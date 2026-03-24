@@ -2,49 +2,126 @@ import { Link } from "react-router-dom";
 
 export default function About() {
   return (
-    <>
-      <h1>About Me</h1>
-      <p>Hi, I'm Mahib Abrar, a hobbyist developer experimenting with web backend technologies. I'm curious, always learning, and love solving problems with code.</p>
+    <main className="about-page">
+      <header className="about-hero">
+        <p className="eyebrow">About</p>
+        <h1>Intentional, curious, and always learning</h1>
+        <p className="about-lead">
+          I’m Mahib Abrar — a hobbyist developer who loves exploring the edges of web and backend
+          technologies, shaping clean architectures, and crafting thoughtful experiences.
+        </p>
+        <div className="about-actions">
+          <a className="btn primary" href="#contact">Get in touch</a>
+          <Link className="btn ghost" to="/">Back home</Link>
+        </div>
+      </header>
 
-      <section className="skilled-language">
-        <h2>Skilled Languages</h2>
-        <section className="language-list">
+      <section className="about-panels" aria-labelledby="skills-heading">
+        <div className="panel-head">
+          <p className="eyebrow">Skills</p>
+          <h2 id="skills-heading">Skilled languages & stacks</h2>
+          <p className="panel-lead">Tooling I reach for when building.</p>
+        </div>
+        <div className="language-list">
           <div className="language-item">
-            <h3>Python <span>(Advanced)</span></h3>
-            <p>Experienced in building web applications, APIs, and automation scripts using Python. Proficient in frameworks like Django and Flask.</p>
+            <div className="chip">Advanced</div>
+            <h3>Python</h3>
+            <p>Web apps, APIs, automation; comfortable with Django, Flask, and clean service layers.</p>
           </div>
           <div className="language-item">
-            <h3>JavaScript <span>(Intermediate-Advanced)</span></h3>
-            <p>Skilled in JavaScript for both frontend and backend development. Experienced with React for building user interfaces and Node.js for server-side applications.</p>
+            <div className="chip">Intermediate-Advanced</div>
+            <h3>JavaScript</h3>
+            <p>React for UI, Node.js for backend services, focused on DX and performance.</p>
           </div>
           <div className="language-item">
-            <h3>HTML & CSS <span>(Intermediate)</span></h3>
-            <p>Proficient in creating responsive and accessible web layouts using HTML and CSS.</p>
+            <div className="chip">Intermediate</div>
+            <h3>HTML & CSS</h3>
+            <p>Accessible, responsive layouts with purposeful motion and systematized tokens.</p>
           </div>
           <div className="language-item">
-            <h3>PHP <span>(Basic-Intermediate)</span></h3>
-            <p>Previously experienced in PHP development but currently focusing on Python and JavaScript.</p>
+            <div className="chip">Basic-Intermediate</div>
+            <h3>PHP</h3>
+            <p>Past experience shipping small tools; currently channeling learnings into Python/JS stacks.</p>
           </div>
-        </section>
+        </div>
       </section>
 
-      <section className="hobbies-interests">
-        <h2>Hobbies & Interests</h2>
-        <p>In my free time, I enjoy exploring new technologies, contributing to open-source projects, and learning about software architecture. I'm passionate about building tools that improve developer experience and performance.</p>
-        <p>I'm also aiming to create projects that can make a positive impact on the world. Check out my <Link to="/projects">projects</Link> to see what I've built so far.</p>
+      <section className="about-panels" aria-labelledby="hobbies-heading">
+        <div className="panel-head">
+          <p className="eyebrow">Hobbies</p>
+          <h2 id="hobbies-heading">Hobbies & interests</h2>
+          <p className="panel-lead">
+            Exploring new tech, contributing to open source, and learning how better systems are designed.
+          </p>
+        </div>
+        <div className="panel-grid">
+          <div className="panel-card">
+            <h3>Building for impact</h3>
+            <p>
+              Small tools that improve developer experience and performance, with an eye on real-world use.
+            </p>
+          </div>
+          <div className="panel-card">
+            <h3>Learning in public</h3>
+            <p>
+              Sharing learnings through projects, refining architectures, and experimenting with MCP-style
+              services.
+            </p>
+          </div>
+          <div className="panel-card">
+            <h3>Always experimenting</h3>
+            <p>
+              Rapid prototypes to validate ideas quickly, then tightening the details so they feel effortless.
+            </p>
+          </div>
+        </div>
       </section>
 
-      <section className="education">
-        <h2>Education</h2>
-        <p>Since I'm under 18, I am still in school and pursuing my education, while learning coding and development on the side.</p>
+      <section className="about-panels" aria-labelledby="education-heading">
+        <div className="panel-head">
+          <p className="eyebrow">Education</p>
+          <h2 id="education-heading">Learning path</h2>
+          <p className="panel-lead">
+            Still in school, building alongside studies, and pairing curiosity with focused practice.
+          </p>
+        </div>
+        <div className="panel-card">
+          <p>
+            I’m under 18 and balancing school with coding. Each project is a way to explore, document, and
+            improve my craft.
+          </p>
+        </div>
       </section>
 
-      <section className="contact">
-        <h2>Contact</h2>
-        <p>Email: <a href="mailto:mahbabrar@example.com">mahbabrar@example.com</a></p>
-        <p>GitHub: <a href="https://github.com/itsmahibabrar" target="_blank" rel="noopener noreferrer">itsmahibabrar</a></p>
-        <p>LinkedIn: <a href="#" target="_blank" rel="noopener noreferrer">LinkedIn Profile</a></p>
+      <section className="about-panels" id="contact" aria-labelledby="contact-heading">
+        <div className="panel-head">
+          <p className="eyebrow">Contact</p>
+          <h2 id="contact-heading">Let’s collaborate</h2>
+          <p className="panel-lead">Reach out and I’ll reply within a day.</p>
+        </div>
+        <div className="contact-grid">
+          <a className="contact-card" href="mailto:mahibabrar123@gmail.com">
+            <span className="chip">Email</span>
+            <h3>mahibabrar123@gmail.com</h3>
+            <p>Best for quick questions and project ideas.</p>
+          </a>
+          <a
+            className="contact-card"
+            href="https://github.com/itsmahibabrar"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <span className="chip">GitHub</span>
+            <h3>@itsmahibabrar</h3>
+            <p>Browse code, issues, and ongoing experiments.</p>
+          </a>
+          <a className="contact-card" href="https://www.youtube.com/@mahibabrar-23" target="_blank" rel="noopener noreferrer">
+            <span className="chip">Youtube</span>
+            <h3>Youtube Gaming Channel</h3>
+            <p>Its mainly about gaming content, not coding.</p>
+          </a>
+        </div>
       </section>
-    </>
+    </main>
   );
 }

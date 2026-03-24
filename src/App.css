@@ -218,6 +218,139 @@ section {
     grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
     gap: 1.2rem;
 }
+.about-page {
+    max-width: 1180px;
+    margin: 0 auto;
+    padding: 5rem 1.5rem 4rem;
+    display: grid;
+    gap: 3rem;
+}
+
+.about-hero h1 {
+    font-size: clamp(2.2rem, 4vw, 3.2rem);
+    margin: 0.6rem 0 0.8rem;
+}
+
+.about-lead {
+    color: var(--muted);
+    max-width: 760px;
+}
+
+.about-actions {
+    display: flex;
+    gap: 0.8rem;
+    margin-top: 1.4rem;
+    flex-wrap: wrap;
+}
+
+.about-panels {
+    border: 1px solid var(--border);
+    border-radius: 18px;
+    background: linear-gradient(150deg, rgba(255, 255, 255, 0.03), rgba(255, 255, 255, 0.015));
+    padding: 1.6rem;
+    box-shadow: 0 22px 60px rgba(0, 0, 0, 0.35);
+}
+
+.panel-head {
+    margin-bottom: 1.5rem;
+    display: grid;
+    gap: 0.35rem;
+}
+
+.panel-head h2 {
+    margin: 0.2rem 0;
+}
+
+.panel-lead {
+    color: var(--muted);
+}
+
+.language-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 1rem;
+}
+
+.language-item {
+    padding: 1.1rem 1rem;
+    border: 1px solid var(--border);
+    border-radius: 14px;
+    background: rgba(255, 255, 255, 0.02);
+    box-shadow: 0 16px 36px rgba(0, 0, 0, 0.28);
+    display: grid;
+    gap: 0.45rem;
+}
+
+.language-item h3 {
+    margin: 0;
+}
+
+.language-item p {
+    color: var(--muted);
+    margin: 0;
+}
+
+.chip {
+    display: inline-flex;
+    align-items: center;
+    padding: 0.25rem 0.7rem;
+    border-radius: 999px;
+    border: 1px solid var(--border);
+    background: rgba(124, 93, 255, 0.15);
+    color: var(--text);
+    font-size: 0.85rem;
+    width: fit-content;
+}
+
+.panel-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    gap: 1rem;
+}
+
+.panel-card {
+    padding: 1.1rem 1rem;
+    border-radius: 14px;
+    border: 1px solid var(--border);
+    background: rgba(255, 255, 255, 0.02);
+    color: var(--muted);
+    box-shadow: 0 14px 32px rgba(0, 0, 0, 0.26);
+}
+
+.contact-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    gap: 1rem;
+}
+
+.contact-card {
+    display: grid;
+    gap: 0.3rem;
+    padding: 1.1rem 1rem;
+    border-radius: 14px;
+    border: 1px solid var(--border);
+    background: linear-gradient(160deg, rgba(124, 93, 255, 0.14), rgba(77, 225, 184, 0.1));
+    color: var(--text);
+    text-decoration: none;
+    transition: transform 0.25s ease, box-shadow 0.25s ease, border-color 0.25s ease;
+    box-shadow: 0 16px 42px rgba(0, 0, 0, 0.32);
+}
+
+.contact-card h3 {
+    margin: 0;
+}
+
+.contact-card p {
+    color: var(--muted);
+    margin: 0;
+}
+
+.contact-card:hover {
+    transform: translateY(-4px);
+    border-color: rgba(124, 93, 255, 0.45);
+    box-shadow: 0 20px 56px rgba(0, 0, 0, 0.38);
+}
+
 
 .about-card {
     background: rgba(255, 255, 255, 0.03);
@@ -228,6 +361,10 @@ section {
 }
 
 .about-card h3 {
+
+    .about-page {
+        padding: 4rem 1.2rem 3rem;
+    }
     margin-bottom: 0.8rem;
 }
 
