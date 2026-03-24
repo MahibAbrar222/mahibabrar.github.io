@@ -7,13 +7,15 @@
   z-index: 1000;
   backdrop-filter: blur(12px);
   -webkit-backdrop-filter: blur(12px);
-  background: #333; /* soft dark base */
+  background: #333 !important; /* soft dark base */
   border-bottom: 1px solid rgba(135, 95, 255, 0.15);
   box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1), inset 0 1px 0 rgba(255,255,255,0.02);
   transition: all 0.4s cubic-bezier(0.34, 1.56, 0.64, 1);
   padding: 0;
 }
-
+.navbar-margin{
+  height: 80px; /* equal to navbar height */
+}
 .navbar.scrolled {
   background: rgba(28, 30, 38, 0.85);
   box-shadow: 0 12px 40px rgba(0, 0, 0, 0.18), inset 0 1px 0 rgba(255,255,255,0.02);

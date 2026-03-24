@@ -7,10 +7,11 @@ export default function Navbar() {
   const [activeSection, setActiveSection] = useState('home');
 
   const navLinks = [
-    { name: "Home", href: "#home", id: "home" },
-    { name: "About", href: "#about", id: "about" },
-    { name: "Projects", href: "#projects", id: "projects" },
-    { name: "Contact", href: "#contact", id: "contact" },
+    { name: "Home", href: "/", id: "home" },
+    { name: "About", href: "/about", id: "about" },
+    { name: "Projects", href: "/projects", id: "projects" },
+    { name: "Contact", href: "/contact", id: "contact" },
+    { name: "Blog", href: "/blog", id: "blog" },
   ];
 
   useEffect(() => {
@@ -40,6 +41,14 @@ export default function Navbar() {
     window.addEventListener('scroll', handleSectionChange);
     return () => window.removeEventListener('scroll', handleSectionChange);
   }, []);
+  // Also Check the current Route
+  useEffect(() => {
+    const currentPath = window.location.pathname;
+    const currentLink = navLinks.find(link => link.href === currentPath);
+    if (currentLink) {
+      setActiveSection(currentLink.id);
+    }
+  }, [window.location.pathname]);
 
   const toggleMobileMenu = () => {
     setIsMobileMenuOpen(!isMobileMenuOpen);
@@ -50,7 +59,7 @@ export default function Navbar() {
   };
 
   return (
-    <nav className={`navbar ${isScrolled ? 'scrolled' : ''}`}>
+    <><nav className={`navbar ${isScrolled ? 'scrolled' : ''}`}>
       <div className="navbar-container">
         {/* Logo */}
         <div className="navbar-logo">
@@ -115,5 +124,6 @@ export default function Navbar() {
         <div className="mobile-menu-overlay" onClick={handleLinkClick}></div>
       )}
     </nav>
+    <div className="navbar-margin"></div></>
   );
 }
