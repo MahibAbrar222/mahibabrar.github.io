@@ -11,6 +11,13 @@
     "preview": "vite preview",
     "deploy": "gh-pages -d dist"
   },
+  "reactSnap": {
+      "puppeteerArgs": [
+        "--no-sandbox",
+        "--disable-setuid-sandbox",
+        "--disable-dev-shm-usage"
+      ]
+    },
   "dependencies": {
     "react": "^19.2.4",
     "react-dom": "^19.2.4",
