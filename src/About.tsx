@@ -100,7 +100,7 @@ export default function About() {
           <p className="panel-lead">Reach out and I’ll reply within a day.</p>
         </div>
         <div className="contact-grid">
-          <a className="contact-card" href="mailto:mahibabrar123@gmail.com">
+          <a className="contact-card" href="mailto:mahibabrar123@gmail.com" rel="me">
             <span className="chip">Email</span>
             <h3>mahibabrar123@gmail.com</h3>
             <p>Best for quick questions and project ideas.</p>
@@ -109,13 +109,13 @@ export default function About() {
             className="contact-card"
             href="https://github.com/itsmahibabrar"
             target="_blank"
-            rel="noopener noreferrer"
+            rel="noopener noreferrer me"
           >
             <span className="chip">GitHub</span>
             <h3>@itsmahibabrar</h3>
             <p>Browse code, issues, and ongoing experiments.</p>
           </a>
-          <a className="contact-card" href="https://www.youtube.com/@mahibabrarofficial" target="_blank" rel="noopener noreferrer">
+          <a className="contact-card" href="https://www.youtube.com/@mahibabrarofficial" target="_blank" rel="noopener noreferrer me">
             <span className="chip">Youtube</span>
             <h3>Youtube Gaming Channel</h3>
             <p>Its mainly about gaming content, not coding.</p>

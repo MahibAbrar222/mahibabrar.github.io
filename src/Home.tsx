@@ -139,15 +139,15 @@ export default function Home() {
             </p>
           </header>
           <div className="contact-actions">
-            <a href="mailto:mahibabrar123@gmail.com" className="btn primary">Email me</a>
-            <a href="https://github.com/itsmahibabrar" className="btn ghost" target="_blank" rel="noopener noreferrer">GitHub</a>
+            <a href="mailto:mahibabrar123@gmail.com" className="btn primary" rel="me">Email me</a>
+            <a href="https://github.com/itsmahibabrar" className="btn ghost" target="_blank" rel="noopener noreferrer me">GitHub</a>
           </div>
           <div className="social-icons">
             <a
               href="https://github.com/itsmahibabrar"
               className="social-icon"
               target="_blank"
-              rel="noopener noreferrer"
+              rel="noopener noreferrer me"
               aria-label="GitHub"
               title="GitHub"
             >
@@ -161,6 +161,7 @@ export default function Home() {
               className="social-icon"
               aria-label="Email"
               title="Email"
+              rel="me"
             >
               <svg viewBox="0 0 24 24" fill="currentColor">
                 <path d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z" />
