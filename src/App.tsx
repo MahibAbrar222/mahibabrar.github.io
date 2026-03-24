@@ -9,13 +9,11 @@ import About from './About';
 export default function App(){
     const location = useLocation();
     useEffect(() => {
-        setTimeout(() => {
+        requestAnimationFrame(() => {
             window.dispatchEvent(new Event("render-event"));
-        }, 100); // small delay to ensure DOM ready
-        }, []);
-    useEffect(() => {
-    console.log("Route rendered:", location.pathname);
-  }, [location]);
+            console.log("Render event dispatched for route change to:", location.pathname)
+        });
+        }, [location.pathname]);
     return (<>
         <Navbar />
 
