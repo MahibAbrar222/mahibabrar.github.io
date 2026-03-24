@@ -12,46 +12,7 @@ type BlogPost = {
 };
 
 const posts: BlogPost[] = [
-    {
-        title: 'Designing Delightful Developer Experiences',
-        excerpt:
-            'Practical heuristics for crafting APIs, CLIs, and docs that make developers smile, ship faster, and stick around.',
-        date: 'Feb 18, 2026',
-        readTime: '6 min read',
-        tags: ['DX', 'Product', 'APIs'],
-        image: 'https://images.unsplash.com/photo-1521737604893-d14cc237f11d?auto=format&fit=crop&w=900&q=80',
-        link: '/blog/designing-delightful-dx',
-    },
-    {
-        title: 'From Idea to MVP: A Weekend Build Blueprint',
-        excerpt:
-            'A step-by-step weekend sprint plan: scoping, technical stack picks, ruthless prioritization, and launch checklists.',
-        date: 'Jan 7, 2026',
-        readTime: '8 min read',
-        tags: ['Startup', 'Productivity', 'Shipping'],
-        image: 'https://images.unsplash.com/photo-1523475472560-d2df97ec485c?auto=format&fit=crop&w=900&q=80',
-        link: '/blog/weekend-mvp-blueprint',
-    },
-    {
-        title: 'Taming State in React Without the Bloat',
-        excerpt:
-            'Lightweight patterns for managing complex UI state using hooks, context boundaries, and data fetching discipline.',
-        date: 'Dec 12, 2025',
-        readTime: '7 min read',
-        tags: ['React', 'Frontend', 'Architecture'],
-        image: 'https://images.unsplash.com/photo-1526378722484-cc5c7100df08?auto=format&fit=crop&w=900&q=80',
-        link: '/blog/taming-state-react',
-    },
-    {
-        title: 'Creating Calm Interfaces with Motion',
-        excerpt:
-            'How to use micro-animations responsibly so your UI feels alive without turning into a distraction.',
-        date: 'Nov 2, 2025',
-        readTime: '5 min read',
-        tags: ['UI', 'Animation', 'UX'],
-        image: 'https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?auto=format&fit=crop&w=900&q=80',
-        link: '/blog/calm-interfaces-motion',
-    },
+    
 ];
 
 export default function Blog() {
