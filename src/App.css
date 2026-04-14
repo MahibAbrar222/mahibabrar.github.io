@@ -7,18 +7,60 @@
     --accent: #7c5dff;
     --accent-2: #4de1b8;
     --border: rgba(255, 255, 255, 0.08);
+    --bg-accent-a: rgba(124, 93, 255, 0.08);
+    --bg-accent-b: rgba(77, 225, 184, 0.08);
+    --surface-elevated: rgba(255, 255, 255, 0.03);
+    --surface-subtle: rgba(255, 255, 255, 0.02);
+    --surface-strong: rgba(255, 255, 255, 0.05);
+    --footer-bg: rgba(5, 9, 21, 0.9);
+    --shadow-soft: 0 10px 24px rgba(0, 0, 0, 0.2);
+    --shadow-card: 0 16px 40px rgba(0, 0, 0, 0.25);
+    --shadow-card-hover: 0 22px 60px rgba(0, 0, 0, 0.4);
+    --outline-soft: rgba(255, 255, 255, 0.14);
+    --about-card-bg: rgba(255, 255, 255, 0.03);
+    --project-overlay: radial-gradient(circle at 80% 0%, rgba(124, 93, 255, 0.18), transparent 36%);
+    color-scheme: dark;
+}
+
+:root[data-theme='light'] {
+    --bg: #f3f7fd;
+    --card: #ffffff;
+    --panel: #eaf0fa;
+    --text: #15263f;
+    --muted: #53627a;
+    --accent: #4a43d4;
+    --accent-2: #0f9e7a;
+    --border: rgba(21, 38, 63, 0.16);
+    --bg-accent-a: rgba(74, 67, 212, 0.12);
+    --bg-accent-b: rgba(15, 158, 122, 0.1);
+    --surface-elevated: rgba(255, 255, 255, 0.72);
+    --surface-subtle: rgba(255, 255, 255, 0.78);
+    --surface-strong: rgba(255, 255, 255, 0.84);
+    --footer-bg: rgba(234, 240, 250, 0.88);
+    --shadow-soft: 0 8px 18px rgba(41, 67, 102, 0.14);
+    --shadow-card: 0 12px 28px rgba(41, 67, 102, 0.14);
+    --shadow-card-hover: 0 16px 34px rgba(41, 67, 102, 0.2);
+    --outline-soft: rgba(21, 38, 63, 0.16);
+    --about-card-bg: rgba(255, 255, 255, 0.72);
+    --project-overlay: radial-gradient(circle at 80% 0%, rgba(74, 67, 212, 0.14), transparent 38%);
+    color-scheme: light;
 }
 
 body {
-    background: radial-gradient(circle at 15% 20%, rgba(124, 93, 255, 0.08), transparent 30%),
-        radial-gradient(circle at 80% 10%, rgba(77, 225, 184, 0.08), transparent 28%),
+    background: radial-gradient(circle at 15% 20%, var(--bg-accent-a), transparent 30%),
+        radial-gradient(circle at 80% 10%, var(--bg-accent-b), transparent 28%),
         var(--bg);
     color: var(--text);
     line-height: 1.6;
+    transition: background 0.25s ease, color 0.25s ease;
 }
 
 section {
     padding: 4.5rem 1.5rem;
+}
+
+section[id] {
+    scroll-margin-top: 102px;
 }
 
 .hero-section {
@@ -100,7 +142,7 @@ section {
 }
 
 .btn.ghost {
-    background: rgba(255, 255, 255, 0.05);
+    background: var(--surface-strong);
 }
 
 .btn.text {
@@ -112,8 +154,8 @@ section {
 
 .btn:hover {
     transform: translateY(-2px);
-    box-shadow: 0 10px 24px rgba(0, 0, 0, 0.2);
-    border-color: rgba(255, 255, 255, 0.18);
+    box-shadow: var(--shadow-soft);
+    border-color: var(--outline-soft);
 }
 
 .hero-metrics {
@@ -127,7 +169,7 @@ section {
     padding: 0.95rem 1rem;
     border: 1px solid var(--border);
     border-radius: 14px;
-    background: linear-gradient(145deg, rgba(255, 255, 255, 0.03), rgba(255, 255, 255, 0.01));
+    background: linear-gradient(145deg, var(--surface-elevated), var(--surface-subtle));
 }
 
 .metric-value {
@@ -167,7 +209,7 @@ section {
     align-items: center;
     gap: 0.75rem;
     padding: 0.9rem 1rem;
-    background: rgba(255, 255, 255, 0.04);
+    background: var(--surface-elevated);
     border: 1px solid var(--border);
     border-radius: 14px;
     width: 100%;
@@ -246,9 +288,9 @@ section {
 .about-panels {
     border: 1px solid var(--border);
     border-radius: 18px;
-    background: linear-gradient(150deg, rgba(255, 255, 255, 0.03), rgba(255, 255, 255, 0.015));
+    background: linear-gradient(150deg, var(--surface-elevated), var(--surface-subtle));
     padding: 1.6rem;
-    box-shadow: 0 22px 60px rgba(0, 0, 0, 0.35);
+    box-shadow: var(--shadow-card);
 }
 
 .panel-head {
@@ -275,8 +317,8 @@ section {
     padding: 1.1rem 1rem;
     border: 1px solid var(--border);
     border-radius: 14px;
-    background: rgba(255, 255, 255, 0.02);
-    box-shadow: 0 16px 36px rgba(0, 0, 0, 0.28);
+    background: var(--surface-subtle);
+    box-shadow: var(--shadow-card);
     display: grid;
     gap: 0.45rem;
 }
@@ -312,9 +354,9 @@ section {
     padding: 1.1rem 1rem;
     border-radius: 14px;
     border: 1px solid var(--border);
-    background: rgba(255, 255, 255, 0.02);
+    background: var(--surface-subtle);
     color: var(--muted);
-    box-shadow: 0 14px 32px rgba(0, 0, 0, 0.26);
+    box-shadow: var(--shadow-card);
 }
 
 .contact-grid {
@@ -333,7 +375,7 @@ section {
     color: var(--text);
     text-decoration: none;
     transition: transform 0.25s ease, box-shadow 0.25s ease, border-color 0.25s ease;
-    box-shadow: 0 16px 42px rgba(0, 0, 0, 0.32);
+    box-shadow: var(--shadow-card);
 }
 
 .contact-card h3 {
@@ -348,23 +390,19 @@ section {
 .contact-card:hover {
     transform: translateY(-4px);
     border-color: rgba(124, 93, 255, 0.45);
-    box-shadow: 0 20px 56px rgba(0, 0, 0, 0.38);
+    box-shadow: var(--shadow-card-hover);
 }
 
 
 .about-card {
-    background: rgba(255, 255, 255, 0.03);
+    background: var(--about-card-bg);
     border: 1px solid var(--border);
     border-radius: 16px;
     padding: 1.6rem;
-    box-shadow: 0 16px 40px rgba(0, 0, 0, 0.25);
+    box-shadow: var(--shadow-card);
 }
 
 .about-card h3 {
-
-    .about-page {
-        padding: 4rem 1.2rem 3rem;
-    }
     margin-bottom: 0.8rem;
 }
 
@@ -385,7 +423,7 @@ section {
 }
 
 .projects-section {
-    background: linear-gradient(180deg, rgba(255, 255, 255, 0.02), rgba(255, 255, 255, 0.01));
+    background: linear-gradient(180deg, var(--surface-elevated), var(--surface-subtle));
 }
 
 .projects {
@@ -404,14 +442,14 @@ section {
     position: relative;
     overflow: hidden;
     transition: transform 0.25s ease, border-color 0.25s ease, box-shadow 0.25s ease;
-    box-shadow: 0 16px 48px rgba(0, 0, 0, 0.35);
+    box-shadow: var(--shadow-card);
 }
 
 .project-card::after {
     content: "";
     position: absolute;
     inset: 0;
-    background: radial-gradient(circle at 80% 0%, rgba(124, 93, 255, 0.18), transparent 36%);
+    background: var(--project-overlay);
     opacity: 0;
     transition: opacity 0.25s ease;
     pointer-events: none;
@@ -420,7 +458,7 @@ section {
 .project-card:hover {
     transform: translateY(-6px);
     border-color: rgba(124, 93, 255, 0.35);
-    box-shadow: 0 22px 60px rgba(0, 0, 0, 0.4);
+    box-shadow: var(--shadow-card-hover);
 }
 
 .project-card:hover::after {
@@ -447,7 +485,7 @@ section {
     padding: 0.35rem 0.7rem;
     border-radius: 999px;
     border: 1px solid var(--border);
-    background: rgba(255, 255, 255, 0.05);
+    background: var(--surface-strong);
     color: var(--text);
     font-size: 0.85rem;
 }
@@ -496,13 +534,13 @@ section {
     height: 58px;
     border-radius: 50%;
     background: linear-gradient(140deg, rgba(124, 93, 255, 0.2), rgba(77, 225, 184, 0.15));
-    border: 1px solid rgba(255, 255, 255, 0.14);
+    border: 1px solid var(--outline-soft);
     color: var(--text);
     text-decoration: none;
     transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
     position: relative;
     overflow: hidden;
-    box-shadow: 0 10px 26px rgba(0, 0, 0, 0.3);
+    box-shadow: var(--shadow-card);
 }
 
 .social-icon::before {
@@ -523,7 +561,7 @@ section {
 .social-icon:hover {
     transform: translateY(-6px) scale(1.04);
     border-color: rgba(124, 93, 255, 0.5);
-    box-shadow: 0 18px 40px rgba(0, 0, 0, 0.38);
+    box-shadow: var(--shadow-card-hover);
 }
 
 .social-icon:hover::before {
@@ -531,17 +569,22 @@ section {
 }
 
 .footer {
-    background: rgba(5, 9, 21, 0.9);
+    background: var(--footer-bg);
     color: var(--muted);
     text-align: center;
     padding: 1.6rem;
     border-top: 1px solid var(--border);
     font-size: 0.95rem;
+    transition: background 0.25s ease, color 0.25s ease;
 }
 
 @media (max-width: 768px) {
     section {
         padding: 3.5rem 1.2rem;
+    }
+
+    .about-page {
+        padding: 4rem 1.2rem 3rem;
     }
 
     .hero-actions,

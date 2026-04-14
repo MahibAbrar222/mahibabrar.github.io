@@ -5,6 +5,7 @@ import Home from './Home';
 import Blog from './Blog';
 import { useEffect } from 'react';
 import About from './About';
+import BlogPost from './BlogPost';
 
 export default function App(){
     const location = useLocation();
@@ -21,6 +22,9 @@ export default function App(){
             <Route path="/" element={<Home />} />
             <Route path='/about' element={<About />} />
             <Route path="/blog" element={<Blog />} />
+            <Route path="/bn/blog" element={<Blog />} />
+            <Route path="/bn/blog/:slug" element={<BlogPost />} />
+            <Route path="/blog/:slug" element={<BlogPost />} />
         </Routes>
 
         <footer className="footer">

@@ -1,19 +1,60 @@
 import { useState, useEffect } from 'react';
 import './Navbar.css';
-import { Link } from 'react-router-dom';
+import { Link, useLocation } from 'react-router-dom';
+
+type Theme = 'light' | 'dark';
+
+const navLinks = [
+  { name: 'Home', to: '/', id: 'home' },
+  { name: 'About', to: '/about', id: 'about' },
+  { name: 'Projects', to: '/#projects', id: 'projects' },
+  { name: 'Contact', to: '/#contact', id: 'contact' },
+  { name: 'Blog', to: '/blog', id: 'blog' },
+];
+
+function getPreferredTheme(): Theme {
+  const savedTheme = window.localStorage.getItem('theme');
+  if (savedTheme === 'light' || savedTheme === 'dark') {
+    return savedTheme;
+  }
+
+  return window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
+}
+
+function getActiveSectionId(pathname: string, hash: string, fallbackSection: string): string {
+  if (pathname.startsWith('/blog') || pathname.startsWith('/bn/blog')) {
+    return 'blog';
+  }
+
+  if (pathname === '/about') {
+    return 'about';
+  }
+
+  if (pathname === '/') {
+    if (hash === '#projects') {
+      return 'projects';
+    }
+
+    if (hash === '#contact') {
+      return 'contact';
+    }
+
+    if (hash === '#about') {
+      return 'about';
+    }
+
+    return fallbackSection;
+  }
+
+  return '';
+}
 
 export default function Navbar() {
+  const location = useLocation();
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
-  const [activeSection, setActiveSection] = useState('home');
-
-  const navLinks = [
-    { name: "Home", href: "/", id: "home" },
-    { name: "About", href: "/about", id: "about" },
-    { name: "Projects", href: "/projects", id: "projects" },
-    { name: "Contact", href: "/contact", id: "contact" },
-    { name: "Blog", href: "/blog", id: "blog" },
-  ];
+  const [activeSectionFromScroll, setActiveSectionFromScroll] = useState('home');
+  const [theme, setTheme] = useState<Theme>(() => getPreferredTheme());
 
   useEffect(() => {
     const handleScroll = () => {
@@ -25,49 +66,71 @@ export default function Navbar() {
   }, []);
 
   useEffect(() => {
+    if (location.pathname !== '/') {
+      return;
+    }
+
+    const sections = [
+      { id: 'hero', navId: 'home' },
+      { id: 'about', navId: 'about' },
+      { id: 'projects', navId: 'projects' },
+      { id: 'contact', navId: 'contact' },
+    ];
+
     const handleSectionChange = () => {
-      const sections = navLinks.map(link => link.id);
+      const offsetY = window.scrollY + 140;
+      let currentSection = 'home';
+
       for (const section of sections) {
-        const element = document.getElementById(section);
-        if (element) {
-          const rect = element.getBoundingClientRect();
-          if (rect.top <= 100 && rect.bottom > 0) {
-            setActiveSection(section);
-            break;
-          }
+        const element = document.getElementById(section.id);
+        if (element && element.offsetTop <= offsetY) {
+          currentSection = section.navId;
         }
       }
+
+      setActiveSectionFromScroll(currentSection);
     };
 
+    handleSectionChange();
     window.addEventListener('scroll', handleSectionChange);
-    return () => window.removeEventListener('scroll', handleSectionChange);
-  }, []);
-  // Also Check the current Route
+    window.addEventListener('resize', handleSectionChange);
+
+    return () => {
+      window.removeEventListener('scroll', handleSectionChange);
+      window.removeEventListener('resize', handleSectionChange);
+    };
+  }, [location.pathname]);
+
   useEffect(() => {
-    const currentPath = window.location.pathname;
-    const currentLink = navLinks.find(link => link.href === currentPath);
-    if (currentLink) {
-      setActiveSection(currentLink.id);
-    }
-  }, [window.location.pathname]);
+    document.documentElement.setAttribute('data-theme', theme);
+    window.localStorage.setItem('theme', theme);
+  }, [theme]);
+
+  const activeSection = getActiveSectionId(location.pathname, location.hash, activeSectionFromScroll);
 
   const toggleMobileMenu = () => {
     setIsMobileMenuOpen(!isMobileMenuOpen);
+  };
+
+  const toggleTheme = () => {
+    setTheme((previousTheme) => (previousTheme === 'dark' ? 'light' : 'dark'));
   };
 
   const handleLinkClick = () => {
     setIsMobileMenuOpen(false);
   };
 
+  const themeButtonLabel = theme === 'dark' ? 'Use light mode' : 'Use dark mode';
+
   return (
     <><nav className={`navbar ${isScrolled ? 'scrolled' : ''}`}>
       <div className="navbar-container">
         {/* Logo */}
         <div className="navbar-logo">
-          <a href="#home" className="logo-text" onClick={handleLinkClick}>
+          <Link to="/" className="logo-text" onClick={handleLinkClick}>
             <span className="logo-icon">◈</span>
             <span className="logo-name">Mahib</span>
-          </a>
+          </Link>
         </div>
 
         {/* Desktop Navigation */}
@@ -75,7 +138,7 @@ export default function Navbar() {
           {navLinks.map((link) => (
             <Link
               key={link.id}
-              to={link.href}
+              to={link.to}
               className={`nav-link ${activeSection === link.id ? 'active' : ''}`}
               onClick={handleLinkClick}
             >
@@ -85,11 +148,21 @@ export default function Navbar() {
           ))}
         </div>
 
-        {/* CTA Button */}
-        <div className="navbar-cta desktop-nav">
-          <a href="#contact" className="cta-btn" onClick={handleLinkClick}>
+        {/* Desktop Actions */}
+        <div className="navbar-actions desktop-nav">
+          <button
+            type="button"
+            className="theme-toggle-btn"
+            onClick={toggleTheme}
+            aria-label={themeButtonLabel}
+            title={themeButtonLabel}
+          >
+            <span aria-hidden="true">{theme === 'dark' ? 'SUN' : 'MOON'}</span>
+            <span>{theme === 'dark' ? 'Light' : 'Dark'}</span>
+          </button>
+          <Link to="/#contact" className="cta-btn" onClick={handleLinkClick}>
             Let's Talk
-          </a>
+          </Link>
         </div>
 
         {/* Hamburger Menu */}
@@ -105,18 +178,27 @@ export default function Navbar() {
         {/* Mobile Navigation */}
         <div className={`mobile-nav ${isMobileMenuOpen ? 'active' : ''}`}>
           {navLinks.map((link) => (
-            <a
+            <Link
               key={link.id}
-              href={link.href}
+              to={link.to}
               className={`mobile-nav-link ${activeSection === link.id ? 'active' : ''}`}
               onClick={handleLinkClick}
             >
               {link.name}
-            </a>
+            </Link>
           ))}
-          <a href="#contact" className="mobile-cta-btn" onClick={handleLinkClick}>
+          <Link to="/#contact" className="mobile-cta-btn" onClick={handleLinkClick}>
             Let's Talk
-          </a>
+          </Link>
+          <button
+            type="button"
+            className="theme-toggle-btn mobile-theme-toggle"
+            onClick={toggleTheme}
+            aria-label={themeButtonLabel}
+          >
+            <span aria-hidden="true">{theme === 'dark' ? 'SUN' : 'MOON'}</span>
+            <span>{theme === 'dark' ? 'Switch to light mode' : 'Switch to dark mode'}</span>
+          </button>
         </div>
       </div>
 
