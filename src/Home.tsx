@@ -1,4 +1,6 @@
 import { Helmet } from "react-helmet";
+import { JsonLd } from "react-schemaorg";
+import type { Person } from "schema-dts";
 
 export default function Home() {
   return (
@@ -22,8 +24,39 @@ export default function Home() {
         />
         <meta property="og:image" content="https://avatars.githubusercontent.com/u/128323013?v=4" />
         <meta property="og:url" content="https://itsmahibabrar.github.io" />
+        {/* Strucutred Data */}
+        <JsonLd<Person>
+          item={{
+            "@context": "https://schema.org",
+            "@type": "Person",
+            "name": "Mahib Abrar",
+            "alternateName": "Mahib",
+            "description": "Student and hobbyist software developer focused on building performance-oriented web applications, embedded systems with ESP32, and experimental AI-driven simulations.",
+            "url": "https://itsmahibabrar.github.io",
+            "image": "https://avatars.githubusercontent.com/u/128323013?v=4",
+            "jobTitle": "Student BUT Hobbiest Developer",
+            "knowsAbout": [
+                "Web Development",
+                "JavaScript",
+                "ReactJS",
+                "Python",
+                "ESP32",
+                "Embedded Systems",
+                "API Design",
+                "AI Simulations"
+            ],
+            "alumniOf": {
+                "@type": "EducationalOrganization",
+                "name": "Monipur High School & College"
+            },
+            "sameAs": [
+                "https://github.com/itsmahibabrar",
+                "https://mahfil.net/channel/mahib-abrar",
+                "https://www.youtube.com/@mahibabrarofficial"
+            ]
+          }}
+        />
       </Helmet>
-
       <main>
         <section id="hero" className="hero-section">
           <div className="hero-content">
