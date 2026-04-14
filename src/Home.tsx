@@ -24,9 +24,9 @@ export default function Home() {
         />
         <meta property="og:image" content="https://avatars.githubusercontent.com/u/128323013?v=4" />
         <meta property="og:url" content="https://itsmahibabrar.github.io" />
-        {/* Strucutred Data */}
-        <JsonLd<Person>
-          item={{
+        {/* Structured Data */}
+        <script type="application/ld+json">
+          {JSON.stringify({
             "@context": "https://schema.org",
             "@type": "Person",
             "name": "Mahib Abrar",
@@ -34,29 +34,30 @@ export default function Home() {
             "description": "Student and hobbyist software developer focused on building performance-oriented web applications, embedded systems with ESP32, and experimental AI-driven simulations.",
             "url": "https://itsmahibabrar.github.io",
             "image": "https://avatars.githubusercontent.com/u/128323013?v=4",
-            "jobTitle": "Student BUT Hobbiest Developer",
+            "jobTitle": "Student & Hobbyist Developer",
             "knowsAbout": [
-                "Web Development",
-                "JavaScript",
-                "ReactJS",
-                "Python",
-                "ESP32",
-                "Embedded Systems",
-                "API Design",
-                "AI Simulations"
+              "Web Development",
+              "JavaScript",
+              "ReactJS",
+              "Python",
+              "ESP32",
+              "Embedded Systems",
+              "API Design",
+              "AI Simulations"
             ],
             "alumniOf": {
-                "@type": "EducationalOrganization",
-                "name": "Monipur High School & College"
+              "@type": "EducationalOrganization",
+              "name": "Monipur High School & College"
             },
             "sameAs": [
-                "https://github.com/itsmahibabrar",
-                "https://mahfil.net/channel/mahib-abrar",
-                "https://www.youtube.com/@mahibabrarofficial"
+              "https://github.com/itsmahibabrar",
+              "https://mahfil.net/channel/mahib-abrar",
+              "https://www.youtube.com/@mahibabrarofficial"
             ]
-          }}
-        />
+          })}
+        </script>
       </Helmet>
+      
       <main>
         <section id="hero" className="hero-section">
           <div className="hero-content">
