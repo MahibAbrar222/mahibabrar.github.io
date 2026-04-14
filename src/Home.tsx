@@ -1,6 +1,4 @@
 import { Helmet } from "react-helmet";
-import { JsonLd } from "react-schemaorg";
-import type { Person } from "schema-dts";
 
 export default function Home() {
   return (
