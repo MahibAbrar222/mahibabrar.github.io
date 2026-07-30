@@ -1,6 +1,8 @@
 import { Helmet } from "react-helmet";
 
 export default function Home() {
+  const linkedInUrl = "https://www.linkedin.com/in/itsmahibabrar";
+
   return (
     <>
       <Helmet>
@@ -49,6 +51,7 @@ export default function Home() {
             },
             "sameAs": [
               "https://github.com/itsmahibabrar",
+              linkedInUrl,
               "https://mahfil.net/channel/mahib-abrar",
               "https://www.youtube.com/@mahibabrarofficial"
             ]
@@ -136,13 +139,18 @@ export default function Home() {
             <p className="section-lead">A snapshot of experiments shipped recently.</p>
           </header>
           <div className="projects">
-            <article className="project-card">
+            <article className="project-card featured">
               <div className="project-top">
                 <div className="pill">Data Infrastructure</div>
                 <div className="pill subtle">Open source</div>
               </div> 
               <h3>SSC Open MCQ Bank</h3>
               <p>A strictly validated, schema-driven dataset compiled directly from public national examinations to break data monopolies and democratize Bangladeshi EdTech.</p>
+              <div className="project-stack">
+                <span>JSON Schema</span>
+                <span>Open Data</span>
+                <span>EdTech</span>
+              </div>
               <div className="project-links">
                 <a href="https://github.com/itsmahibabrar/ssc-open-mcq-bank" target="_blank" rel="noopener noreferrer" className="btn text">View project</a>
               </div>
@@ -154,6 +162,11 @@ export default function Home() {
               </div>
               <h3>Bangla Quran MCP</h3>
               <p>Provides MCP access to Quran resources in Bangla with reliable endpoints and clean responses.</p>
+              <div className="project-stack">
+                <span>TypeScript</span>
+                <span>MCP</span>
+                <span>APIs</span>
+              </div>
               <div className="project-links">
                 <a href="https://mcpize.com/mcp/bangla-quran-mcp" target="_blank" rel="noopener noreferrer" className="btn text">View project</a>
               </div>
@@ -166,6 +179,11 @@ export default function Home() {
               </div>
               <h3>Minecraft Server Status MCP</h3>
               <p>Queries Minecraft Java Edition servers for up-to-date status, latency, and MOTD in a single call.</p>
+              <div className="project-stack">
+                <span>Realtime</span>
+                <span>MCP</span>
+                <span>Game Ops</span>
+              </div>
               <div className="project-links">
                 <a href="https://mcpize.com/mcp/minecraft-server-status" target="_blank" rel="noopener noreferrer" className="btn text">View project</a>
               </div>
@@ -184,6 +202,7 @@ export default function Home() {
           <div className="contact-actions">
             <a href="mailto:mahibabrar123@gmail.com" className="btn primary" rel="me">Email me</a>
             <a href="https://github.com/itsmahibabrar" className="btn ghost" target="_blank" rel="noopener noreferrer me">GitHub</a>
+            <a href={linkedInUrl} className="btn ghost" target="_blank" rel="noopener noreferrer me">LinkedIn</a>
           </div>
           <div className="social-icons">
             <a
@@ -196,6 +215,18 @@ export default function Home() {
             >
               <svg viewBox="0 0 24 24" fill="currentColor">
                 <path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.002 12.002 0 0 0 24 12c0-6.63-5.37-12-12-12z" />
+              </svg>
+            </a>
+            <a
+              href={linkedInUrl}
+              className="social-icon"
+              target="_blank"
+              rel="noopener noreferrer me"
+              aria-label="LinkedIn"
+              title="LinkedIn"
+            >
+              <svg viewBox="0 0 24 24" fill="currentColor">
+                <path d="M4.98 3.5C4.98 4.88 3.87 6 2.49 6S0 4.88 0 3.5 1.11 1 2.49 1s2.49 1.12 2.49 2.5ZM.5 8h4V24h-4V8Zm7 0h3.83v2.18h.06c.53-1.01 1.84-2.08 3.79-2.08 4.05 0 4.8 2.67 4.8 6.14V24h-4v-7.87c0-1.88-.03-4.29-2.62-4.29-2.62 0-3.02 2.05-3.02 4.16V24h-4V8Z" />
               </svg>
             </a>
 

@@ -443,6 +443,9 @@ section[id] {
     overflow: hidden;
     transition: transform 0.25s ease, border-color 0.25s ease, box-shadow 0.25s ease;
     box-shadow: var(--shadow-card);
+    display: flex;
+    flex-direction: column;
+    gap: 0.9rem;
 }
 
 .project-card::after {
@@ -466,13 +469,13 @@ section[id] {
 }
 
 .project-card h3 {
-    margin: 0.6rem 0;
+    margin: 0.2rem 0 0;
     font-size: 1.35rem;
 }
 
 .project-card p {
     color: var(--muted);
-    margin-bottom: 1rem;
+    margin: 0;
 }
 
 .project-top {
@@ -498,6 +501,33 @@ section[id] {
     display: flex;
     gap: 0.6rem;
     align-items: center;
+    margin-top: auto;
+    padding-top: 0.5rem;
+}
+
+.project-stack {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.45rem;
+}
+
+.project-stack span {
+    font-size: 0.8rem;
+    font-weight: 600;
+    color: var(--muted);
+    padding: 0.28rem 0.62rem;
+    border-radius: 999px;
+    border: 1px solid var(--border);
+    background: var(--surface-subtle);
+}
+
+.project-card.featured {
+    border-color: rgba(124, 93, 255, 0.36);
+    background: linear-gradient(165deg, rgba(124, 93, 255, 0.14), rgba(77, 225, 184, 0.07) 45%, var(--card));
+}
+
+.project-card.featured .pill:first-child {
+    border-color: rgba(124, 93, 255, 0.45);
 }
 
 .contact-section {
