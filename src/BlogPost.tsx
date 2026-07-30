@@ -210,6 +210,7 @@ export default function BlogPost() {
                         },
                         "sameAs": [
                             "https://github.com/itsmahibabrar",
+                            "https://www.linkedin.com/in/itsmahibabrar",
                             "https://mahfil.net/channel/mahib-abrar",
                             "https://www.youtube.com/@mahibabrarofficial"
                         ]

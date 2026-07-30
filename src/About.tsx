@@ -115,6 +115,16 @@ export default function About() {
             <h3>@itsmahibabrar</h3>
             <p>Browse code, issues, and ongoing experiments.</p>
           </a>
+          <a
+            className="contact-card"
+            href="https://www.linkedin.com/in/itsmahibabrar"
+            target="_blank"
+            rel="noopener noreferrer me"
+          >
+            <span className="chip">LinkedIn</span>
+            <h3>/in/itsmahibabrar</h3>
+            <p>Connect for collaborations, updates, and professional networking.</p>
+          </a>
           <a className="contact-card" href="https://www.youtube.com/@mahibabrarofficial" target="_blank" rel="noopener noreferrer me">
             <span className="chip">Youtube</span>
             <h3>Youtube Gaming Channel</h3>
