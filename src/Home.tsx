@@ -1,4 +1,5 @@
 import { Helmet } from "react-helmet";
+import { projectsData } from "./data/projects"; // Data Import
 
 export default function Home() {
   const linkedInUrl = "https://www.linkedin.com/in/itsmahibabrar";
@@ -13,7 +14,7 @@ export default function Home() {
         />
         <meta
           name="keywords"
-          content="Mahib Abrar, developer portfolio, projects, contact, web development, software engineering"
+          content="Mahib Abrar, developer portfolio, projects, contact, web development, software engineering, FastAPI, ONNX, OpenCV"
         />
         <meta name="author" content="Mahib Abrar" />
 
@@ -24,6 +25,7 @@ export default function Home() {
         />
         <meta property="og:image" content="https://avatars.githubusercontent.com/u/128323013?v=4" />
         <meta property="og:url" content="https://itsmahibabrar.github.io" />
+        
         {/* Structured Data */}
         <script type="application/ld+json">
           {JSON.stringify({
@@ -37,13 +39,13 @@ export default function Home() {
             "jobTitle": "Student & Hobbyist Developer",
             "knowsAbout": [
               "Web Development",
-              "JavaScript",
-              "ReactJS",
+              "FastAPI",
+              "OpenCV",
+              "ONNX Runtime",
               "Python",
-              "ESP32",
-              "Embedded Systems",
-              "API Design",
-              "AI Simulations"
+              "TypeScript",
+              "ReactJS",
+              "API Design"
             ],
             "alumniOf": {
               "@type": "EducationalOrganization",
@@ -60,6 +62,7 @@ export default function Home() {
       </Helmet>
       
       <main>
+        {/* Hero Section */}
         <section id="hero" className="hero-section">
           <div className="hero-content">
             <div className="hero-text">
@@ -69,7 +72,7 @@ export default function Home() {
               </h1>
               <p>
                 I design and develop calm, reliable products with a focus on performance, accessibility,
-                and developer experience. Mostly crafting for the web and Model Context Protocol.
+                and developer experience. Mostly crafting for the web, computer vision APIs, and Model Context Protocol.
               </p>
               <div className="hero-actions">
                 <a href="#projects" className="btn primary">View projects</a>
@@ -79,6 +82,10 @@ export default function Home() {
                 <div className="metric">
                   <span className="metric-value">1+</span>
                   <span className="metric-label">MCP tools launched</span>
+                </div>
+                <div className="metric">
+                  <span className="metric-value">~147</span>
+                  <span className="metric-label">API RPS Benchmarked</span>
                 </div>
               </div>
             </div>
@@ -91,20 +98,21 @@ export default function Home() {
                 <span className="dot" aria-hidden="true" />
                 <div>
                   <p className="status-label">Currently building</p>
-                  <p className="status-value">Microtools & MCP endpoints</p>
+                  <p className="status-value">FastAPI Services & MCP Tooling</p>
                 </div>
               </aside>
             </div>
           </div>
         </section>
 
+        {/* About Section */}
         <section id="about" className="about-section">
           <header className="section-header">
             <p className="eyebrow">About</p>
             <h2>Intentional craft over noise</h2>
             <p className="section-lead">
               I love experimenting with new stacks, shaping lean architectures, and keeping interfaces
-              purposeful. From API design to UI polish, I sweat the details so the experience feels
+              purposeful. From computer vision inference pipelines to UI polish, I sweat the details so the experience feels
               effortless.
             </p>
           </header>
@@ -113,16 +121,16 @@ export default function Home() {
               <h3>What drives me</h3>
               <ul>
                 <li>Performance-first builds with clean, maintainable code.</li>
-                <li>Accessible, readable interfaces that feel calm.</li>
+                <li>Optimized image processing & CPU-bound ML inference pipelines.</li>
                 <li>Rapid prototyping to validate ideas quickly.</li>
               </ul>
             </div>
             <div className="about-card">
               <h3>Stacks I lean on</h3>
               <ul>
+                <li>FastAPI, OpenCV, ONNX Runtime, Python.</li>
                 <li>TypeScript, React, Vite, Node.</li>
-                <li>MCP-compatible services and tooling.</li>
-                <li>Design systems with purposeful motion.</li>
+                <li>MCP-compatible services and infrastructure.</li>
               </ul>
             </div>
           </div>
@@ -132,65 +140,52 @@ export default function Home() {
           </div>
         </section>
 
+        {/* Dynamic Projects Section */}
         <section id="projects" className="projects-section">
           <header className="section-header">
             <p className="eyebrow">Selected work</p>
-            <h2>Projects that balance utility and polish</h2>
-            <p className="section-lead">A snapshot of experiments shipped recently.</p>
+            <h2>Projects that balance utility and performance</h2>
+            <p className="section-lead">A snapshot of core projects and experiments shipped recently.</p>
           </header>
           <div className="projects">
-            <article className="project-card featured">
-              <div className="project-top">
-                <div className="pill">Data Infrastructure</div>
-                <div className="pill subtle">Open source</div>
-              </div> 
-              <h3>SSC Open MCQ Bank</h3>
-              <p>A strictly validated, schema-driven dataset compiled directly from public national examinations to break data monopolies and democratize Bangladeshi EdTech.</p>
-              <div className="project-stack">
-                <span>JSON Schema</span>
-                <span>Open Data</span>
-                <span>EdTech</span>
-              </div>
-              <div className="project-links">
-                <a href="https://github.com/itsmahibabrar/ssc-open-mcq-bank" target="_blank" rel="noopener noreferrer" className="btn text">View project</a>
-              </div>
-            </article>
-            <article className="project-card">
-              <div className="project-top">
-                <div className="pill">Model Context Protocol</div>
-                <div className="pill subtle">Open source</div>
-              </div>
-              <h3>Bangla Quran MCP</h3>
-              <p>Provides MCP access to Quran resources in Bangla with reliable endpoints and clean responses.</p>
-              <div className="project-stack">
-                <span>TypeScript</span>
-                <span>MCP</span>
-                <span>APIs</span>
-              </div>
-              <div className="project-links">
-                <a href="https://mcpize.com/mcp/bangla-quran-mcp" target="_blank" rel="noopener noreferrer" className="btn text">View project</a>
-              </div>
-            </article>
+            {projectsData.filter(p => p.featured).map((project) => (
+              <article key={project.slug} className={`project-card ${project.slug === 'captcha-solver-poc' ? 'featured' : ''}`}>
+                <div className="project-top">
+                  <div className="pill">{project.category}</div>
+                  {project.badge && <div className="pill subtle">{project.badge}</div>}
+                </div> 
+                <h3>{project.title}</h3>
+                <p>{project.description}</p>
+                
+                {/* Visual Performance Metrics for CAPTCHA Project */}
+                {project.metrics && (
+                  <div className="project-metrics-inline" style={{ display: 'flex', gap: '1rem', margin: '0.5rem 0', fontSize: '0.85rem', opacity: 0.9 }}>
+                    <span><strong>Throughput:</strong> ~{project.metrics.rps} RPS</span>
+                    <span><strong>Avg Latency:</strong> ~{project.metrics.latency}</span>
+                  </div>
+                )}
 
-            <article className="project-card">
-              <div className="project-top">
-                <div className="pill">Realtime</div>
-                <div className="pill subtle">Service tooling</div>
-              </div>
-              <h3>Minecraft Server Status MCP</h3>
-              <p>Queries Minecraft Java Edition servers for up-to-date status, latency, and MOTD in a single call.</p>
-              <div className="project-stack">
-                <span>Realtime</span>
-                <span>MCP</span>
-                <span>Game Ops</span>
-              </div>
-              <div className="project-links">
-                <a href="https://mcpize.com/mcp/minecraft-server-status" target="_blank" rel="noopener noreferrer" className="btn text">View project</a>
-              </div>
-            </article>
+                <div className="project-stack">
+                  {project.techStack.map((tech) => (
+                    <span key={tech}>{tech}</span>
+                  ))}
+                </div>
+                <div className="project-links">
+                  <a href={project.githubUrl} target="_blank" rel="noopener noreferrer" className="btn text">
+                    View GitHub
+                  </a>
+                  {project.caseStudyUrl && (
+                    <a href={project.caseStudyUrl} className="btn text secondary" style={{ marginLeft: '1rem' }}>
+                      Read Case Study →
+                    </a>
+                  )}
+                </div>
+              </article>
+            ))}
           </div>
         </section>
 
+        {/* Contact Section */}
         <section id="contact" className="contact-section">
           <header className="section-header">
             <p className="eyebrow">Contact</p>
@@ -229,7 +224,6 @@ export default function Home() {
                 <path d="M4.98 3.5C4.98 4.88 3.87 6 2.49 6S0 4.88 0 3.5 1.11 1 2.49 1s2.49 1.12 2.49 2.5ZM.5 8h4V24h-4V8Zm7 0h3.83v2.18h.06c.53-1.01 1.84-2.08 3.79-2.08 4.05 0 4.8 2.67 4.8 6.14V24h-4v-7.87c0-1.88-.03-4.29-2.62-4.29-2.62 0-3.02 2.05-3.02 4.16V24h-4V8Z" />
               </svg>
             </a>
-
             <a
               href="mailto:mahibabrar123@gmail.com"
               className="social-icon"
